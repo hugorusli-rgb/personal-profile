@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* Turn on class-based dark mode (toggling a "dark" class on <html>)
+   without needing anything from tailwind.config.ts. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---- Basic site-wide styles ---- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.dark body {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Make sure keyboard focus is always visible */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Simple link styling so links look like links */
+.site-link {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.dark .site-link {
+  color: #93c5fd;
+}
